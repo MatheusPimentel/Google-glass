@@ -1,0 +1,285 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+@font-face {
+	font-family:'FonteLogo';
+	src: url(../_fonts/bubblegum-sans-regular.otf);
+}
+
+body {
+	/* faz aparecer uma cor no fundo */
+	background-color: #dddddd;
+	/* define a cor da letra do body */
+	color: rgba(0,0,0,1);
+	font-family: Arial, sans-serif;
+}
+
+div#interface {
+	/* faz aparecer uma cor no fundo */
+	background-color: #ffffff;
+	/* delimita a largura em pixels */
+	width: 900px;
+	/* define as margens do site */
+	margin: -20px auto 0px auto;
+	/* cria uma sombra em volta do objeto (deslocamento lateral, deslocamento vertical, espalhamento da sombra, cor da sombra */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+	/* ajusta a margem de dentro do site para não ficar colado nas laterais */
+	padding: 10px 10px 10px 10px;
+}
+
+p {
+	text-align: justify;
+	text-indent: 50px;
+}
+
+/* formatção de imagens com legendas*/
+
+figure.foto-legenda {
+	border: 8px solid white;
+	box-shadow: 1px 1px 4px black;
+	position: relative;
+}
+
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+
+figure.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	/* faz aparecer uma cor no fundo */
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box; 
+	transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+	opacity: 1;
+}
+
+/*formatação menu*/
+
+nav#menu ul {
+	list-style: none;
+	/* transforma o texto em maiusculo */
+	text-transform: uppercase;
+	/* faz com que a posição da lista dos menus seja absoluta para que ela possa flutuar para cima dos objetos */
+	/* posição relativa só pode ser movida dentro do conteiner */
+	/* posição absoluta faz com que ela possa ser movida por todo o site */
+	position: absolute;
+	/* move o conteiner para cima */
+	top: -20px;
+	/* move o conteine para esquerda */
+	left: 500px;
+}
+
+nav#menu li {
+	/* faz aparecer em tudo na mesma linha */
+	display: inline-block;
+	/* faz aparecer uma cor no fundo */
+	background-color: #dddddd;
+	/* espaço de dentro do background-color com a letra */
+	padding: 10px;
+	/* espaço de fora do background-color */
+	margin: 2px;
+	/* faz com que a transição de uma cor para a outra demore 1 segundo */
+	transition: background-color 1s;
+}
+
+nav#menu {
+	/* faz com que o navegador menu seja exibido como um bloco */
+	display: block;
+}
+
+/* hover: é um efeito que passar o mouse por cima mudará o estado dele com as configurações abaixo */
+nav#menu li:hover {
+	background-color: #606060;
+}
+
+nav#menu h1 {
+	/* esconde o titulo menu principal */
+	display: none;
+}
+
+nav#menu a {
+	color: black;
+	/* retira o underline das listas */
+	text-decoration: none;
+}
+
+nav#menu a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+header#cabecalho img#icone {
+	position: absolute;
+	left: 950px;
+	top: 70px;
+}
+
+header#cabecalho {
+	/* cria uma borda (linha) na interface */
+	border-bottom: 1px #606060 solid;
+	/* altura */
+	height: 150px;
+	/* background: faz com que a imagem seja como um plano de fundo (papel de parede)
+	 * no-repeat: não deixa a imagem se repetir (deslocamento horizontal, deslocamento vertical) */
+	background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+	/*../imagens/glass-logo-peq.jpg*/
+}
+
+header#cabecalho h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	/* margem de baixo */
+	margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	color: #888888;
+	font-size: 15pt;
+	margin-top: 0px;
+}
+
+section#corpo {
+	display: block;
+	width: 500px;
+	float: left;
+	border-right: 1px #606060 solid;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+aside#lateral {
+	display: block;
+	width: 350px;
+	float: right;
+	background-color: #dddddd;
+	margin-top: 10px;
+	padding: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+footer#rodape {
+	/* retira o rodape do aside e section */
+	clear: both;
+	border-top: 1px #606060 solid;
+	padding-top: 15px;
+}
+
+footer#rodape p {
+	/* tudo que for paragrafo será centralizado (no meio do site) */
+	text-align: center;
+}
+/* target = "_blank" faz abrir em um nova aba */
+/* tr = linha de uma tabela
+ * td = eh o dado de uma tabela */
+/* rowspan determina o quanto de linha a tabela usara
+ * colspan determina o quanto de coluna a tabela usara */
+/* 'class' eh um identificador para a coluna */
+ 
+table#tabelaspec {
+	border: 1px solid #606060;
+	/* faz com que os espaçoes entre as bordas das tabelas seja de 0 */
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaspec td {
+	border: 1px solid #000000;
+	padding: 10px;
+}
+
+table#tabelaspec td.ce {
+	color: #ffffff;
+	background-color: #606060;
+	text-align: right;
+	vertical-align: top;
+	font-weight: bold;
+}
+
+table#tabelaspec td.cd {
+	background-color: #cecece;
+}
+
+table#tabelaspec caption {
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bolder;
+}
+
+table#tabelaspec caption span {
+	display: block;
+	float: right;
+	margin-top: 10px;
+	font-size: 8pt;
+}
+
+article#noticia-principal h2 {
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5px 10px;
+	margin: 10px 0px 10px 0px;
+}
+header#cabecalho-artigo h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+}
+
+header#cabecalho-artigo h2 {
+	font-size: 13pt;
+	color: #cecece;
+	background-color: #ffffff;
+	margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+	font-size: 12pt;
+	color: #606060;
+	background-color: #ffffff;
+}
+
+.direita {
+	text-align: right;
+}
+
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+aside#lateral h1 {
+	font-family:'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color:#606060;
+	margin-top: 0px;
+}
+
+aside#lateral h2 {
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px;
+}
+
+video#filme2 {
+	width: 350px;
+}

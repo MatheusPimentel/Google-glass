@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Teste JavaScript</title>
+		<meta charset="utf-8"/>
+		<script type="text/javascript">
+			function acendeLampada() {
+				document.getElementById("luz").src="_imagens/lampada-acesa.jpg";
+			}
+
+			function apagaLampada() {
+				document.getElementById("luz").src="_imagens/lampada-apagada.jpg";
+			}
+
+			function quebraLampada() {
+				document.getElementById("luz").src="_imagens/lampada-quebrada.jpg";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Acenda a lâmpada</h1>
+		<!-- onclick="acendeLampada()" quando clicar na lampada, irá chamar o script acendeLampada
+		     onmousemove="acendeLampada()" quando o maouse passar por cima da lampada, isso irá chamar o script -->
+		<img src="_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()"
+		onclick="quebraLampada()" onmouseout="apagaLampada()"/>
+	</body>
+</html>
